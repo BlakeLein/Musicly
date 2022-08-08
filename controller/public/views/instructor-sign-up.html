@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructor Sign Up</title>
+  <link rel="stylesheet" href="../css/ISignUp.css">
+  <script defer src="../js/instructor-sign-up.js"></script>
+</head>
+<body>
+
+<!-- !!!NAVBAR!!! -->
+  <div class="navbar">
+    <a href="/home"><img src="../images/music icon.png" alt="" class="logo" /></a>
+    <h2>Musicly</h2>
+    <nav>
+      <ul class = "nav-list">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/signin">Sign in</a></li>
+        <li><a href="/signup/student">Student Sign Up</a></li>
+        <li><a href="/signup/instructor">Instructor Sign Up</a></li>
+      </ul>
+    </nav>
+    <img src="" alt="" class="menu-icon" />
+  </div>
+
+<!-- MAIN BODY -->
+<div class="wrapper-signUp">
+  <div class="title">
+      <h1>Instructor Sign Up</h1>
+  </div>
+  <div class="signUp-container">
+      <div class="signUp-col-left">
+        <div class="signUp-form">
+  <!-- Modal for Instructor Account -->
+          <form class="modal-form" id="form">
+            <label>First Name
+              <input type="text" id="first" required />
+            </label>
+            <label>Last Name
+              <input type="text" id="last" required />
+            </label>
+            <label>Email Address/Username
+              <input type="email" id="email" required />
+            </label>
+            <label>Enter your Password
+              <input type="password" id="password1" required />
+            </label>
+            <label>Re-enter your Password
+              <input type="password" id="password2" required />
+            </label>
+            <label>Select your Instrument
+              <select id="instrument-options" required>
+                <option value="" disabled selected hidden>
+                  Select your Instrument
+                </option>
+                <!-- Options to be appended to page from the js file -->
+              </select>
+            </label>
+            <input type="submit" value="Sign Up" id ="signUp-btn"></input>
+        </form>
+      </div>
+    </div>
+
+    <div class="signUp-col-right">
+      <div class =  signUp-text>
+          <h3>Not an instructor?</h3> 
+          <p><a href="../signup/student" class = signUp-link>Click Here</a> to create a student account.</p>
+          <br>
+          <h3>Already have an account?</h3> 
+          <p><a href="../../signin" class = signUp-link>Click Here</a> to sign in.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

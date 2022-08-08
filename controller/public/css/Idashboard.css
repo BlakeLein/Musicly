@@ -1,0 +1,585 @@
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap%27');
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+
+}
+body {
+  background: linear-gradient(#840032, #e5dada);
+}
+.dash-container {
+  display: flex;
+}
+nav {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  background: #e5dada;
+  width: 280px;
+  /* overflow: hidden; */
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.logo span {
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+a {
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 21px;
+  display: table;
+  width: 280px;
+  padding: 10px;
+}
+
+nav .material-symbols-outlined {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+  color:#02040F
+}
+.nav-item:hover{
+  color: #002642;
+}
+a:hover{
+    color: #002642;
+}
+
+/* DISPLAY AREA */
+
+.main-container {
+  position: relative;
+  padding: 20px;
+  width: 90%;
+}
+
+#sample-card {
+  max-width: 350px;
+  height: auto;
+  margin: 10px;
+  background: #E5DADA;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+#card-title {
+  text-align: center;
+  border-bottom: solid 1px #02040F;
+
+}
+#card-date{
+  font-weight: 800;
+  color: #840032;
+}
+
+.card h3 {
+  margin: 10px;
+  text-transform: capitalize;
+}
+.card p {
+  font-size: 20px;
+  display: flex;
+  padding: 3px;
+  flex-direction: column;
+}
+.deleteAvailable {
+  background: #840032;
+  color: whitesmoke;
+  padding: 7px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.deleteAvailable:hover {
+  background: #e59500;
+}
+.deleteClaimed {
+  background: #840032;
+  color: whitesmoke;
+  padding: 7px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.deleteClaimed:hover {
+  background: #e59500;
+}
+.removeStudent {
+  background: #002642;
+  color: whitesmoke;
+  padding: 7px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.removeStudent:hover {
+  background: #e59500;
+}
+
+li {
+  padding: 12px 0;
+}
+li button {
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 18px;
+  display: table;
+  background: #e5dada;
+}
+
+li button:hover{
+    color: #002642 ;
+    cursor: pointer;
+}
+#sign-out-btn:hover {
+  width: 98%;
+}
+#something {
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 350px));
+  grid-gap: 20px;
+  padding: 20px;
+}
+.main-container h1{
+  color: #E5DADA;
+}
+
+/* Modal Styles for Create a Lesson Feature*/
+.modal {
+  position: fixed;
+  left: 15%;
+  right: 15%;
+  bottom: 15%;
+  top: 15%;
+  border: solid 1px #02040F;
+  border-radius: 10px;
+  transform: scale(0);
+  z-index: 10;
+  background-color: #002642;
+}
+
+#modal-body {
+  height: 90%;
+}
+.active {
+  transform: scale(1);
+}
+
+#modal-header {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+#modal-title {
+  width: 100%;
+  font-size: 40px;
+  color: #b7b7b7;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #e5dada;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  align-self: center;
+  margin-right: 10px;
+}
+.modal-body {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-item {
+  color: 707070;
+  width: 80%;
+  height: 90px;
+  margin: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px;
+}
+#start-time {
+  margin-top: 5px;
+  background: #e5dada;
+  font-size: 30px;
+}
+#stop-time {
+  margin-top: 5px;
+  background: #e5dada;
+  font-size: 25px;
+}
+#date {
+  margin-top: 8px;
+  background: #e5dada;
+  font-size: 25px;
+}
+#cost {
+  margin-top: 8px;
+  background: #e5dada;
+  font-size: 25px;
+}
+
+.form-submit-button {
+  margin-top: 10px;
+  width: 200px;
+  border: none;
+  height: 50px;
+  border-radius: 25px;
+  transition: 0.5s;
+  background: #e5dada;
+}
+
+
+  .form-submit-button:hover{
+    
+    color:#E5DADA;;
+    box-shadow: inset 250px 0 0 0 #840032;
+  }
+  
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+  
+  .active {
+    transform: scale(1);
+  }
+  
+  
+  .modal-form {
+    width: 100%;
+    border: solid 1px #02040F;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    background:#E5DADA;
+    border: solid 1px #02040F;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  
+  .login-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .active {
+    transform: scale(1);
+  }
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+  }
+  
+  #overlay.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+
+  /* SETTINGS STUFF */
+
+  .login-container{
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    display: flex;
+    background:#E5DADA;
+    box-shadow: 0 0 5px #999999 ;
+}
+.userTitle{
+  margin:15px;
+  color: #E5DADA;
+}
+.login-container label{
+  border:none
+}
+#change-email{
+  border-radius: 15px;
+  transition: .5s;
+}
+#change-password{
+  border-radius: 15px;
+  transition: .5s;
+}
+#change-instrument{
+  border-radius: 15px;
+  transition: .5s;
+}
+#change-email:hover{
+  color: #E5DADA;
+  background:#002642;;
+}
+#change-password:hover{
+  color: #E5DADA;
+  background:#002642;;
+}
+#change-instrument:hover{
+  color: #E5DADA;
+  background:#002642;;
+}
+.InstructorSettings-container{
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 15px;
+    width: 100%;
+    max-width: 1140px;
+    min-height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.signIn-col-left,
+.signIn-col-right{
+    padding:30px;
+    display: flex;
+}
+.signIn-col-left{
+    width: 60%;
+    clip-path: polygon(0 0,0% 200%,100% 0);
+    background: linear-gradient(#002642,#E5DADA);;
+}
+.signIn-col-right{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 30px;
+    width: 50%;
+    margin-left: -10px;
+}
+
+.login-text{
+  font-size: 20px;
+  position: relative;
+  width: 100%;
+  color: whitesmoke;
+}
+
+.login-text h2{
+    margin: 0 0 15px 0;
+    font-size: 33px;
+    font-weight: 700;
+  }
+  
+  
+  .login-form{
+    position: relative;
+    width: 100%;
+  }
+  .login-form h2{
+    margin: 0 0 15px 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #02040F;
+  }
+  .login-form label{
+    margin: 10px 10px 10px 0;
+    text-align: left;
+    color: #666666;
+    font-size: 18px;
+  }
+  .login-form input{
+    margin: 10px 10px 10px 0;
+    text-align: left;
+    color: #666666;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    outline:none;
+    border: 1px solid whitesmoke;
+    border-radius: 30px;
+  }
+  .login-form select{
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    outline:none;
+    border: 1px solid whitesmoke;
+    border-radius: 30px;
+  }
+  
+  .login-form input:focus{
+    border-color: #840032;
+    
+  }
+  #delete-account{
+    margin-top: 10px;
+    width: 50%;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #002642;
+    background: transparent;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid #002642;
+    box-shadow: inset 0 0 0 0 #002642;
+    transition: .5s;
+  }
+  
+  #delete-account:hover{
+    color: whitesmoke;
+    box-shadow: inset 250px 0 0 0 #840032;
+  }
+  
+  @media(max-width:600px){
+      .login-container{
+          flex-direction: column;
+          box-shadow: none;
+      }
+      .signIn-col-left,
+      .signIn-col-right{
+      width: 100%;
+      margin:0;
+      clip-path:none
+  }
+      .signIn-col-right{
+          padding:30px;
+          padding-bottom: 10px;
+          background: #E5DADA;
+      }
+}
+
+
+      @media(max-width:770px){
+    nav{
+      background: transparent;
+      width: 100px;
+      transition: .5s;
+    }
+    .nav-item{
+      display: none;
+      transition: .5s;
+    }
+    li button{
+      background: transparent;
+      transition: .5s;
+    }
+    span{
+      color: #E5DADA;
+    };
+    #modal-title{
+      font-size: 15px;
+    }
+}
+
+
+@media(max-height:950px){
+  .userTitle{
+      font-size: 20px;
+      margin: 10px;
+  }
+  .studentSettings-container{
+      justify-content:initial
+      }
+  .login-container{
+          flex-direction: column;
+          box-shadow: none;
+      }
+  
+  .signIn-col-left,
+  .signIn-col-right{
+  width: 100%;
+  margin:0;
+  clip-path:none;
+  padding:10px;
+  }
+  .signIn-col-left{
+      background: #002642;
+  }
+  .signIn-col-right h2{
+      display: none;
+  }
+  .login-form input{
+      margin: 5px 10px;
+      height: 25px;
+  }
+}

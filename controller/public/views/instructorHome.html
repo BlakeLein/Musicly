@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructor Home</title>
+    <link rel="stylesheet" href="../css/Idashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script defer src="../js/instructorHome.js"></script>
+  </head>
+  <body>
+    <div class="dash-container">
+      <nav>
+          <ul>
+              <li><a href="" class =logo>
+                  <img src="../images/music icon.png" alt="">
+                  <span class="nav-item">Musicly Instructor</span>
+              </a></li>
+              <li><a href=""class ="home">
+                  <span class="material-symbols-outlined">
+                      home
+                      </span>
+                  <span class="nav-item">Home</span>
+              </a></li>
+              <li><button id="create-lesson">
+                  <span class="material-symbols-outlined">
+                      add_circle
+                      </span>
+                  <span class="nav-item">Create a Lesson</span>
+                </button></li>
+              <li><button id="view-available">
+                  <span class="material-symbols-outlined">
+                      visibility
+                      </span>
+                  <span class="nav-item">Available Lessons</span>
+              </button></li>
+              <li><button id="view-taken">
+                <span class="material-symbols-outlined">
+                  event_available
+                  </span>
+                  <span class="nav-item">Scheduled Lessons</span>
+              </button></li>
+              <li><a href=""class ="viewStudents">
+                <span class="material-symbols-outlined">
+                  groups
+                  </span>
+                  <span class="nav-item">My Students</span>
+              </a></li>
+              <li><a href="#"class ="messageCenter">
+                  <span class="material-symbols-outlined">
+                      chat
+                      </span>
+                  <span class="nav-item">Message Center</span>
+              </a></li>
+              <li><a href="/settings"class ="Settings">
+                  <span class="material-symbols-outlined">
+                      settings
+                      </span>
+                  <span class="nav-item">Settings</span>
+              </a></li>
+              <li><button id="sign-out-btn">
+                  <span class="material-symbols-outlined">
+                      logout
+                      </span>
+                  <span class="nav-item">Logout</span>
+                </button></li>
+          </ul>
+      </nav>
+
+      <section class="main-container">
+        <h1>Welcome ${getUserName}!</h1>
+        <div id="display-container">
+          <div class="inner-container" id="available-lessons">
+          <ul id="something">
+          </ul>
+          </div>
+        </div>
+      </section>
+  </div>
+        <!----------Modal stuff needs to stay at bottom of HTML. Don't mess with form elements------->
+      <div class="modal" id="modal">
+        <div id="modal-header">
+          <div id="modal-title">Create a New Lesson
+          </div>
+          <div id="modal-close">&times
+          </div>
+        </div>
+        <div id="modal-body">
+        <form class="modal-body" id="form">
+          <label class="form-item" for="date"
+            >Date
+            <input type="date" id="date" value="mm/dd/yyyy"required />
+          </label>
+          <label class="form-item" for="start-time"
+            >Start Time
+            <input type="time" id="start-time" required />
+          </label>
+          <label class="form-item" for="stop-time"
+            >Stop Time
+            <input type="time" id="stop-time" required />
+          </label>
+          <label class="form-item" for="cost"
+            >Lesson Cost
+            <input type="number" id="cost" min="1" required />
+          </label>
+          <input class="form-submit-button" type="submit" value="Create a New Lesson"></input>
+        </form>
+        </div>
+      </div>
+    </div>
+    <!-- Leave this here (copy over Overlay styles)-->
+    <div class="" id="overlay"></div>
+  </body>
+</html>
