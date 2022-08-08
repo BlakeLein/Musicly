@@ -1,272 +1,85 @@
- <div align="center">
+# **_Musicly_**
 
-  <img src="" alt="logo" width="200" height="auto" />
+"Musicly" is an online application where music instructors and students can coordinate private lessons. This website utilizes a full-stack coding library (HTML, CSS, JavaScript, Node.js, Express.js, Postgres, and Sequelize).
 
-  <p>
-    Welcome to Musicaly: A Private Lesson App
-  </p>
+---
 
-<h4>
-    
-  </h4>
-</div>
+## **Created By**
 
-<br />
+---
 
-<!-- Table of Contents -->
+### Blake Lein
 
-# Table of Contents
+### Ethan Gula
 
-- [About the Project](#about-the-project)
-  - [Screenshots](#screenshots)
-  - [Tech Stack](#tech-stack)
-  - [Features](#features)
-  - [Color Reference](#color-reference)
-- [Getting Started](#getting-started)
-  - [Run Locally](#run-locally)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [Acknowledgements](#acknowledgements)
+Published August 2022
 
+[Email Me](blake.lein@gmail.com) | [GitHub](https://github.com/BlakeLein/Musicly) | [LinkedIn](https://www.linkedin.com/in/blake-lein-bb6187238)
 
-<!-- About the Project -->
+[You can view an article I wrote about the making of this project here](https://medium.com/@blake.lein/lessons-in-full-stack-8ee5911553bb)
 
-## About the Project
+---
 
-<!-- Screenshots -->
+### **Requirements**
 
-  <img src="src\controller\public\images\webHome.jpg" style= width:600px />
+Musicly is deployed online, so all you need to get started is this link: ("""")
 
-<!-- TechStack -->
+## How "Discover America" Works
 
-### Tech Stack
+---
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://www.javascript.com/">JavaScript</a></li>
-    <li><a href="https://nodejs.org/en/">Node.js</a></li>
-    <li><a href="https://sequelize.org/">Sequelize</a></li>
-    <li>Custom HTML/CSS</li>
-  </ul>
-</details>
+### Wesbite Overview
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.elephantsql.com/">PostgreSQL</a></li>
-  </ul>
-</details>
+"Discover America" is a website that utilizes the NPS and Open Weather APIs to provide users with up-to-date information regarding their favorite National Parks and presents it to them in a clean, consistent format. At the click of a button, you can find and view all practical information related to visiting a national park. If it's a park you are particularly interested, you can add the park to your list of favorites, where they will be waiting for you in a separate tab ready to be reviewed.
 
+---
 
+### Website Features
 
+Here are some of the website's features in greater detail:
 
+- Scenic backgrounds from the American countryside
+- Clean hide-away navbar
+- "Find a Park" page that allows users to search by name or view all parks in a specific state
+- "Favorites" page the allows users to keep track of their favorite parks
+- "Random Park" page allows users to click a button and receive a random park for a spontaneous adventure or just a fun learning experience!
+- "Discover America" is fully responsive for all devices
 
-<!-- Features -->
+---
 
-### Features
+## "Discover America" In Development
 
-- Account Creation as Student or Instructor
-- Ability to Create Lessons
-- Ability to View Created, Available & Scheduled Lessons
-- Deleting/Canceling a Lesson
-- Mobile Responsive
-- Changing User Settings
+This website represents the second major project in our Digital Crafts coursework and demonstates an ability to work with HTML, CSS, Javascript, DOM manipulation, and API implementation.
 
-<!-- Color Reference -->
+As with our first project, there are several things that come to mind to expand and improve "Discover America" down the road:
 
-### Color Reference & Styles
+- Creating a "plan-your'trip" feature that allows users to view more information related to actually visiting a national park (road maps, available flights, other attractions, relevent news, etc).
+- Including a multi-day weather forecast for each park, not just a current weather forecast.
+- A more sophisticated memory storage technique for users to keep track of their favorite parks (this would include a back-end server access).
 
-<a href="https://coolors.co/002642-840032-e59500-e5dada-02040f">Coolors</a>
-- <span style="color:#840032">#840032</span>.
-- <span style="color:#002642">#002642</span>.
-- <span style="color:#E59500">#E59500</span>.
-- <span style="color:#E5DADA">#E5DADA</span>.
-- <span style="color:#02040F">#02040F</span>.
+## Photos of "Discover America"
 
-<!-- Env Variables -->
-
-### Environment Variables
-
-
-
-<!-- Getting Started -->
-
-## Getting Started
-
-<!-- Run Locally -->
-
-### Run Locally
-
-Clone the project
-
-https://github.com/BlakeLein/privateLessonScheduler
-
-Go to the project directory
-
-You must have previously installed:
-Node.js
-Nodemon
-Sequelize
-
-```bash
-  cd privateLessonScheduler
-```
-
-Install dependencies
-
-```bash
-  npm i
-```
-
-Start the server
-
-```bash
-  cd controller
-  nodemon
-```
-
-<!-- Usage -->
-
-## Usage
-
-Users fill out a form to sign up, the contents of the form get sent to our database to create a user.
-
-<details>
-  <summary>Sign Up Page</summary>
-<img alt="mobiledash"width = "400px" src="/controller/public/mobileDash.jpg"/>
-</details>
-
-```javascript
-router.post("/create-instructor-user", async (req, res) => {
-  const { first, last, email, password, instrument } = req.body;
-  try {
-    const salt = await bcrypt.genSalt(7);
-    const hashedPassword = await bcrypt.hash(password, salt);
-    const encryptedUser = {
-      firstName: first,
-      lastName: last,
-      email: email,
-      password: hashedPassword,
-      instrument: instrument,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
-    const createUser = await Instructors.create(encryptedUser);
-    res.json({
-      message: "Account Created",
-    });
-    res.status(200);
-  } catch (error) {
-    res.send(error.message);
-  }
-});
-```
-When Users sign in thier credentials are checked in our database.
-<details>
-  <summary>Sign-in</summary>
-  <div align="center"> 
-<img style="width: 550px" src=""/>
-</div>
-</details>
-
-```javascript
-router.post("/instructor-sign-in", async (req, res) => {
-  const { user, pass } = req.body;
-  if (!req.body.user || !req.body.pass) {
-    res.status(400).json({
-      message: "Please enter username and password.",
-    });
-  }
-  try {
-    const instructorUser = await Instructors.findOne({
-      where: {
-        email: req.body.user,
-      },
-    });
-    if (!instructorUser) {
-      res.status(400).json({ message: "That username is incorrect." });
-    } else {
-      const userWeFound = instructorUser.dataValues;
-      const validPassword = await bcrypt.compare(pass, userWeFound.password);
-      if (!validPassword) {
-        res.status(400).json({
-          message: "That password is incorrect.",
-        });
-      } else {
-        req.session.user = instructorUser;
-        res.json({
-          message: "Login Success",
-          user: userWeFound,
-        });
-        res.status(200);
-      }
-    }
-  } catch (error) {
-    res.send(error);
-  }
-});
-```
-
-From the dashboard users can view the lessons that they have scheduled.
-
-<details>
-  <summary>Dashboard</summary>
-  <div align="center"> 
-<img style="width: 550px" src=""/>
-</div>
-</details>
-
-```javascript
-router.post("/claimed-lessons", async (req, res) => {
-  const showStudentsWithLessons = await Students.findAll({
-    include: {
-      model: Lessons,
-      as: "lessons",
-      where: {
-        instructorId: req.session.user.id,
-      },
-    },
-  });
-  res.json(showStudentsWithLessons);
-});
-```
-
-Each user has a specific dashboard with features unique to the type of user they are. Instructors have more features than students.
-
-<details>
-  <summary>Lesson Dashboard (Instructor Point of View)</summary>
-  <div align="center"> 
-<img style="width: 550px" src=""/>
-</div>
-</details>
-<details>
-  <summary>Lesson Dashbopard (Student Point of View)</summary>
-  <div align="center"> 
-<img style="width: 550px" src="src\assets\readme\guestView.PNG"/>
-</div>
-</details>
-
-<!-- Contributing -->
-
-## Contributing
-
-<div style=display:flex>
-
-<a href="https://github.com/BlakeLein">
-  <img src="https://avatars.githubusercontent.com/u/101301999?v=4" alt="logo" width="100" height="auto"
-
-<a href="https://github.com/Emgula96">
-  <img src="https://avatars.githubusercontent.com/u/106848391?s=400&u=5158bf4aed7661d1f7feb389ef5760b861513990&v=4" alt="logo" width="100" height="auto" />
-</a>
-</div>
-
-
-
-## Acknowledgements
-
-A Special Thanks to our Instructor Joe and TA Violet!
-
-- [Joe Fraiser](https://github.com/jwfrasier)
-- [Violet]()
-
+<img src="images/home.png"
+alt="Home Page"
+width="900" height="400"
+/>
+<img src="images/search.png"
+alt="Stats Menu"
+width="900" height="400"
+/>
+<img src="images/search2.png"
+alt="Search Function"
+width="900" height="400"
+/>
+<img src="images/favorites.png"
+alt="Favorites Page"
+width="900" height="400"
+/>
+<img src="images/modal1.png"
+alt="Modal Menu 1"
+width="900" height="400"
+/>
+<img src="images/modal2.png"
+alt="Modal Menu 2"
+width="900" height="400"
+/>
