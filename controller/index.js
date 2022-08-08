@@ -4,7 +4,7 @@ const app = express();
 const cors = require("cors");
 const es6Renderer = require("express-es6-template-engine");
 const router = express.Router();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const models = require("../sequelize/models");
 
 //cookie/session stuff -need double check download packages!
