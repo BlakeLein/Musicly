@@ -20,17 +20,17 @@ Published August 2022
 
 ---
 
-### **Requirements**
+## **Requirements**
 
 Musicly is deployed online, so all you need to get started is this link: ("""")
 
-## How "Discover America" Works
+## How Musicly Works
 
 ---
 
 ### Wesbite Overview
 
-"Discover America" is a website that utilizes the NPS and Open Weather APIs to provide users with up-to-date information regarding their favorite National Parks and presents it to them in a clean, consistent format. At the click of a button, you can find and view all practical information related to visiting a national park. If it's a park you are particularly interested, you can add the park to your list of favorites, where they will be waiting for you in a separate tab ready to be reviewed.
+Musicly is an online web application that utilizes a full-stack coding library to give instructors and students the ability to schedule and cancel private music lessons. Instructors can create lesson slots to include date, start and stop time, and cost. Students can track all available lessons that their teacher has created and claim them so no other student can. These claimed lessons appear in their "My Lessons" tab and simultaneously show up in their teacher's "Claimed Lessons" tab. Since Musicly requires a password-protected account, all information is confidential between the instructor and student
 
 ---
 
@@ -38,48 +38,49 @@ Musicly is deployed online, so all you need to get started is this link: ("""")
 
 Here are some of the website's features in greater detail:
 
-- Scenic backgrounds from the American countryside
-- Clean hide-away navbar
-- "Find a Park" page that allows users to search by name or view all parks in a specific state
-- "Favorites" page the allows users to keep track of their favorite parks
-- "Random Park" page allows users to click a button and receive a random park for a spontaneous adventure or just a fun learning experience!
-- "Discover America" is fully responsive for all devices
+- Password-protected accounts for instructor and student privacy.
+- Resonsive on all media devices.
+- "Create Lesson" feature for instructors to build out their schedule based on dates, times, and cost.
+- Instructors can cancel and remove students from their schedule.
+- Ability for students to claim available lessons and have them show up as claimed on their instructor's account.
+- Full capabilities for updating account information or deleting your account altogether.
 
 ---
 
 ## "Discover America" In Development
 
-This website represents the second major project in our Digital Crafts coursework and demonstates an ability to work with HTML, CSS, Javascript, DOM manipulation, and API implementation.
+This website represents the third major project in our Digital Crafts coursework and demonstrates our first full-stack project. Musicly utilizes HTML, CSS, JavaScript, Node.js, Express.js, PostgreSQL, and Sequelize.
 
-As with our first project, there are several things that come to mind to expand and improve "Discover America" down the road:
+As our projects have gotten bigger, so also has the potential for each project. Here are some ways we might expand Musicly:
 
-- Creating a "plan-your'trip" feature that allows users to view more information related to actually visiting a national park (road maps, available flights, other attractions, relevent news, etc).
-- Including a multi-day weather forecast for each park, not just a current weather forecast.
-- A more sophisticated memory storage technique for users to keep track of their favorite parks (this would include a back-end server access).
+- Creating an authentication system for users creating their accounts.
+- Creating an approval process for instructors signing up.
+- Adding a messaging feature to the app for students and parents to communicate directly through the app.
+- Sorting the lesson slots by date with an automatic expiration system.
+- A "calendar" layout for created lessons to appear in a neat format.
 
-## Photos of "Discover America"
+## Photos of Musicly
 
-<img src="images/home.png"
+<img src="controller/public/images/webHome.jpg" 
 alt="Home Page"
-width="900" height="400"
-/>
-<img src="images/search.png"
-alt="Stats Menu"
-width="900" height="400"
-/>
-<img src="images/search2.png"
-alt="Search Function"
-width="900" height="400"
-/>
-<img src="images/favorites.png"
-alt="Favorites Page"
-width="900" height="400"
-/>
-<img src="images/modal1.png"
-alt="Modal Menu 1"
-width="900" height="400"
-/>
-<img src="images/modal2.png"
-alt="Modal Menu 2"
-width="900" height="400"
-/>
+width="900" height="400">
+
+<img src="controller/public/images/signIn.png" 
+alt="Sign In Page"
+width="900" height="400">
+
+<img src="controller/public/images/studentDash.jpg" 
+alt="Student Dash"
+width="900" height="400">
+
+<img src="controller/public/images/mobileDash.jpg" 
+alt="Mobile Dash"
+width="200" height="400">
+
+<img src="controller/public/images/createLesson.png" 
+alt="Create Lesson Page"
+width="900" height="400">
+
+<img src="controller/public/images/settings.png" 
+alt="Settings Page"
+width="900" height="400">
