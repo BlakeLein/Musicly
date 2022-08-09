@@ -70,12 +70,12 @@ const sendInstructorData = async () => {
     }
   );
   const json = await dataWeAreSending.json();
-  if (json.message != "Account Created"){
-    window.location.href= "/signup/student"}
-  else{
-      alert("Account successfully created!");
-      window.location.href = "/signin";
-    }
+  if (json.message != "Account Created") {
+    window.location.href = "/signup/student";
+  } else {
+    alert("Account successfully created!");
+    window.location.href = "/signin";
+  }
 };
 
 // Function to check that passwords match

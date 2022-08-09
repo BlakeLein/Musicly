@@ -22,7 +22,7 @@ something.addEventListener("click", async (e) => {
       let primaryKey = e.target.id;
 
       const claimingItem = await fetch(
-        `http://localhost:3000/student/cancel-lesson/${primaryKey}`,
+        `http://localhost:3000/cancel-lesson/${primaryKey}`,
         {
           method: "PUT",
           headers: {
