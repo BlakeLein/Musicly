@@ -60,7 +60,7 @@ const sendInstructorData = async () => {
     instrument: instrumentOptions.value,
   };
   const dataWeAreSending = await fetch(
-    "http://localhost:3000/signup/create-instructor-user",
+    "http://https://salty-mountain-91433.herokuapp.com/signup/create-instructor-user",
     {
       method: "POST",
       headers: {
@@ -71,10 +71,11 @@ const sendInstructorData = async () => {
   );
   const json = await dataWeAreSending.json();
   if (json.message != "Account Created") {
-    window.location.href = "/signup/student";
+    window.location.href =
+      "https://salty-mountain-91433.herokuapp.com/signup/student";
   } else {
     alert("Account successfully created!");
-    window.location.href = "/signin";
+    window.location.href = "https://salty-mountain-91433.herokuapp.com/signin";
   }
 };
 

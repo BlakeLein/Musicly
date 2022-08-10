@@ -10,16 +10,28 @@
     <script defer src="../js/sign-in.js"></script>
   </head>
   <body>
-    
-    
+     <!-- Hamburger Menu -->
+    <div class="hidden-sidebar">
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <ul class="nav-list">
+          <li><a href="/signin">Sign in</a></li>
+          <li><a href="/signup/student">Student Sign Up</a></li>
+          <li><a href="/signup/instructor">Instructor Sign Up</a></li>
+        </ul>
+      </div>
+      <div id="menu-button">
+        <button id="openbtn" onclick="openNav()">☰</button>
+      </div>
+    </div>
     <!-- !!!NAVBAR!!! -->
+    <div class="container">
     <div class="navbar">
-      <a href="/home"><img src="../images/music icon.png" alt="" class="logo" /></a>
+      <!-- <a href="/home"><img src="../images/music icon.png" alt="" class="logo" /></a> -->
       <h2>Musicly</h2>
       <nav>
         <ul class = "nav-list">
           <li><a href="/home">Home</a></li>
-          <li><a href="/signin">Sign in</a></li>
           <li><a href="/signup/student">Student Sign Up</a></li>
           <li><a href="/signup/instructor">Instructor Sign Up</a></li>
         </ul>
@@ -28,9 +40,6 @@
     </div>
 
       <!-- MAIN CONTAINER -->
-      
-      
-      
       <div class="wrapper-login">
         <div class="login-container">
             <div class="signIn-col-left">
@@ -70,6 +79,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 </html>

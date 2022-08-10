@@ -9,7 +9,7 @@ const sendStudentData = async () => {
     pass: password.value,
   };
   const dataWeAreSending = await fetch(
-    "http://localhost:3000/signin/student-sign-in",
+    "https://salty-mountain-91433.herokuapp.com/signin/student-sign-in",
     {
       method: "POST",
       headers: {
@@ -26,7 +26,8 @@ const sendStudentData = async () => {
   } else if (json.message == "That password is incorrect.") {
     alert("Incorrect password.");
   } else {
-    window.location.href = "/student/home";
+    window.location.href =
+      "https://salty-mountain-91433.herokuapp.com/student/home";
   }
 };
 
@@ -36,7 +37,7 @@ const sendInstructorData = async () => {
     pass: password.value,
   };
   const dataWeAreSending = await fetch(
-    "http://localhost:3000/signin/instructor-sign-in",
+    "https://salty-mountain-91433.herokuapp.com/signin/instructor-sign-in",
     {
       method: "POST",
       headers: {
@@ -53,7 +54,8 @@ const sendInstructorData = async () => {
   } else if (json.message == "That password is incorrect.") {
     alert("Incorrect password.");
   } else {
-    window.location.href = "/instructor/home";
+    window.location.href =
+      "https://salty-mountain-91433.herokuapp.com/instructor/home";
   }
 };
 

@@ -3,7 +3,7 @@
 const signInButton = document.getElementById("signInButton");
 
 signInButton.addEventListener("click", () => {
-  window.location.href = "/signin";
+  window.location.href = "https://salty-mountain-91433.herokuapp.com/signin";
 });
 
 // function myFunction() {

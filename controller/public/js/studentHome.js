@@ -8,7 +8,7 @@ something.addEventListener("click", async (e) => {
       let primaryKey = e.target.id;
 
       const claimingItem = await fetch(
-        `http://localhost:3000/student/claim-lesson/${primaryKey}`,
+        `https://salty-mountain-91433.herokuapp.com/student/claim-lesson/${primaryKey}`,
         {
           method: "PUT",
           headers: {
@@ -22,7 +22,7 @@ something.addEventListener("click", async (e) => {
       let primaryKey = e.target.id;
 
       const claimingItem = await fetch(
-        `http://localhost:3000/cancel-lesson/${primaryKey}`,
+        `https://salty-mountain-91433.herokuapp.com/cancel-lesson/${primaryKey}`,
         {
           method: "PUT",
           headers: {
@@ -61,7 +61,7 @@ const getFormattedTime = (time) => {
 // Route/Function to get lessons that are available
 const getLessonsFromInstructor = async () => {
   const dataWeAreSending = await fetch(
-    "http://localhost:3000/student/lessons-from-instructor",
+    "https://salty-mountain-91433.herokuapp.com/student/lessons-from-instructor",
     {
       method: "POST",
       headers: {
@@ -105,7 +105,7 @@ veiwAvailableLessons.addEventListener("click", () => {
 // View My Lessons
 const viewMyLessons = async () => {
   const dataWeAreSending = await fetch(
-    "http://localhost:3000/student/view-my-lessons",
+    "https://salty-mountain-91433.herokuapp.com/student/view-my-lessons",
     {
       method: "POST",
       headers: {
@@ -153,14 +153,17 @@ myLessonsButton.addEventListener("click", () => {
 const signOutButton = document.getElementById("sign-out-btn");
 
 const logOut = async () => {
-  const fetchLogOut = await fetch("http://localhost:3000/signin/logout", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const fetchLogOut = await fetch(
+    "https://salty-mountain-91433.herokuapp.com/signin/logout",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
   alert("Successfully Logged Out");
-  window.location.href = "/home";
+  window.location.href = "https://salty-mountain-91433.herokuapp.com/home";
 };
 
 signOutButton.addEventListener("click", async () => {

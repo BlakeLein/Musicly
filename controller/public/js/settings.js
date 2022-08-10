@@ -19,16 +19,19 @@ const signOutButton = document.getElementById("sign-out-btn");
 
 // Logout Functionality
 const logOut = async () => {
-  const fetchLogOut = await fetch("http://localhost:3000/signin/logout", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const fetchLogOut = await fetch(
+    "https://salty-mountain-91433.herokuapp.com/signin/logout",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
   const json = await fetchLogOut.json();
   if (json.message == "Logout Success") {
     alert("Successfully Logged Out");
-    window.location.href = "/home";
+    window.location.href = "https://salty-mountain-91433.herokuapp.com/home";
   }
 };
 
@@ -42,7 +45,7 @@ const changeUsername = async () => {
     newUsername: changeUserInput.value,
   };
   const sendNewUsername = await fetch(
-    "http://localhost:3000/settings/change-username",
+    "https://salty-mountain-91433.herokuapp.com/settings/change-username",
     {
       method: "PUT",
       headers: {
@@ -77,7 +80,7 @@ const changePassword = async () => {
     newPassword: changePasswordInput.value,
   };
   const sendNewPassword = await fetch(
-    "http://localhost:3000/settings/change-password",
+    "https://salty-mountain-91433.herokuapp.com/settings/change-password",
     {
       method: "PUT",
       headers: {
@@ -148,7 +151,7 @@ const changeInstrument = async () => {
     newInstrument: changeInstrumentInput.value,
   };
   const sendNewInstrument = await fetch(
-    "http://localhost:3000/settings/change-instrument",
+    "https://salty-mountain-91433.herokuapp.com/settings/change-instrument",
     {
       method: "PUT",
       headers: {
@@ -186,7 +189,7 @@ const deleteButton = document.getElementById("delete-account");
 
 const deleteAccount = async () => {
   const deleteThisAccount = await fetch(
-    "http://localhost:3000/settings/delete-account",
+    "https://salty-mountain-91433.herokuapp.com/settings/delete-account",
     {
       method: "DELETE",
       headers: {
@@ -213,7 +216,7 @@ const changeInstructor = async () => {
     newInstructor: changeInstructorInput.value,
   };
   const sendNewInstructor = await fetch(
-    "http://localhost:3000/settings/change-instructor",
+    "https://salty-mountain-91433.herokuapp.com/settings/change-instructor",
     {
       method: "PUT",
       headers: {
