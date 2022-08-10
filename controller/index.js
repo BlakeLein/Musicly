@@ -56,7 +56,7 @@ app.use("/settings", settingsRoutes);
 
 // Routes
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render("home.html");
 });
 
 app.listen(PORT, console.log(`Listening on Port ${PORT}`));
