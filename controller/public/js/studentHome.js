@@ -1,4 +1,5 @@
 const something = document.querySelector("#something");
+const hi = "blake";
 
 something.addEventListener("click", async (e) => {
   try {
