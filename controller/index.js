@@ -50,9 +50,9 @@ app.set("view engine", "html");
 
 // Routes
 // Check login and redirect to student or teacher home page
-app.get("/home", (req, res) => {
-  res.render("home");
-});
+// app.get("/home", (req, res) => {
+//   res.render("home");
+// });
 app.get("/", (req, res) => {
   res.render("home");
 });
