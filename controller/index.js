@@ -43,9 +43,9 @@ app.use(
 store.sync();
 
 // Template Engine
-app.use(express.static("public"));
+app.use("/public", express.static("public"));
 app.engine("html", es6Renderer);
-app.set("views", "public/views");
+app.set("views", "./public/views");
 app.set("view engine", "html");
 
 // Routes
@@ -53,7 +53,7 @@ app.set("view engine", "html");
 // app.get("/home", (req, res) => {
 //   res.render("home");
 // });
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.render("home");
 });
 
