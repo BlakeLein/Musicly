@@ -45,7 +45,7 @@ store.sync();
 // Template Engine
 app.use(express.static("public"));
 app.engine("html", es6Renderer);
-app.set("views", "./public/views");
+app.set("views", "/public/views");
 app.set("view engine", "html");
 
 // Routes
