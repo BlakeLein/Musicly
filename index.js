@@ -63,4 +63,4 @@ app.use("/student", studentRoutes);
 app.use("/instructor", instructorRoutes);
 app.use("/settings", settingsRoutes);
 
-app.listen(3000, console.log(`Listening on Port ${PORT}`));
+app.listen(PORT, console.log(`Listening on Port ${PORT}`));
