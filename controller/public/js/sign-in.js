@@ -9,7 +9,7 @@ const sendStudentData = async () => {
     pass: password.value,
   };
   const dataWeAreSending = await fetch(
-    "https://salty-mountain-91433.herokuapp.com/signin/student-sign-in",
+    "https://musicly-scheduler.herokuapp.com/signin/student-sign-in",
     {
       method: "POST",
       headers: {
@@ -27,7 +27,7 @@ const sendStudentData = async () => {
     alert("Incorrect password.");
   } else {
     window.location.href =
-      "https://salty-mountain-91433.herokuapp.com/student/home";
+      "https://musicly-scheduler.herokuapp.com/student/home";
   }
 };
 
@@ -37,7 +37,7 @@ const sendInstructorData = async () => {
     pass: password.value,
   };
   const dataWeAreSending = await fetch(
-    "https://salty-mountain-91433.herokuapp.com/signin/instructor-sign-in",
+    "https://musicly-scheduler.herokuapp.com/signin/instructor-sign-in",
     {
       method: "POST",
       headers: {
@@ -55,7 +55,7 @@ const sendInstructorData = async () => {
     alert("Incorrect password.");
   } else {
     window.location.href =
-      "https://salty-mountain-91433.herokuapp.com/instructor/home";
+      "https://musicly-scheduler.herokuapp.com/instructor/home";
   }
 };
 

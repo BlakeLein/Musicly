@@ -8,7 +8,7 @@ something.addEventListener("click", async (e) => {
       let primaryKey = e.target.id;
 
       const claimingItem = await fetch(
-        `https://salty-mountain-91433.herokuapp.com/student/claim-lesson/${primaryKey}`,
+        `https://musicly-scheduler.herokuapp.com/student/claim-lesson/${primaryKey}`,
         {
           method: "PUT",
           headers: {
@@ -22,7 +22,7 @@ something.addEventListener("click", async (e) => {
       let primaryKey = e.target.id;
 
       const claimingItem = await fetch(
-        `https://salty-mountain-91433.herokuapp.com/cancel-lesson/${primaryKey}`,
+        `https://musicly-scheduler.herokuapp.com/cancel-lesson/${primaryKey}`,
         {
           method: "PUT",
           headers: {
@@ -61,7 +61,7 @@ const getFormattedTime = (time) => {
 // Route/Function to get lessons that are available
 const getLessonsFromInstructor = async () => {
   const dataWeAreSending = await fetch(
-    "https://salty-mountain-91433.herokuapp.com/student/lessons-from-instructor",
+    "https://musicly-scheduler.herokuapp.com/student/lessons-from-instructor",
     {
       method: "POST",
       headers: {
@@ -105,7 +105,7 @@ veiwAvailableLessons.addEventListener("click", () => {
 // View My Lessons
 const viewMyLessons = async () => {
   const dataWeAreSending = await fetch(
-    "https://salty-mountain-91433.herokuapp.com/student/view-my-lessons",
+    "https://musicly-scheduler.herokuapp.com/student/view-my-lessons",
     {
       method: "POST",
       headers: {
@@ -154,7 +154,7 @@ const signOutButton = document.getElementById("sign-out-btn");
 
 const logOut = async () => {
   const fetchLogOut = await fetch(
-    "https://salty-mountain-91433.herokuapp.com/signin/logout",
+    "https://musicly-scheduler.herokuapp.com/signin/logout",
     {
       method: "POST",
       headers: {
@@ -163,7 +163,7 @@ const logOut = async () => {
     }
   );
   alert("Successfully Logged Out");
-  window.location.href = "https://salty-mountain-91433.herokuapp.com/home";
+  window.location.href = "https://musicly-scheduler.herokuapp.com/home";
 };
 
 signOutButton.addEventListener("click", async () => {

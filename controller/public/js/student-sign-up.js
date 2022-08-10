@@ -51,7 +51,7 @@ const sendStudentData = async () => {
     instructor: instructorSelect.value,
   };
   const dataWeAreSending = await fetch(
-    "https://salty-mountain-91433.herokuapp.com/signup/create-student-user",
+    "https://musicly-scheduler.herokuapp.com/signup/create-student-user",
     {
       method: "POST",
       headers: {
@@ -64,10 +64,10 @@ const sendStudentData = async () => {
   const json = await dataWeAreSending.json();
   if (json.message != "Account Created") {
     window.location.href =
-      "https://salty-mountain-91433.herokuapp.com/signup/student";
+      "https://musicly-scheduler.herokuapp.com/signup/student";
   } else {
     alert("Account successfully created!");
-    window.location.href = "https://salty-mountain-91433.herokuapp.com/signin";
+    window.location.href = "https://musicly-scheduler.herokuapp.com/signin";
   }
 };
 

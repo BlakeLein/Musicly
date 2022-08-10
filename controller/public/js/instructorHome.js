@@ -46,7 +46,7 @@ something.addEventListener("click", async (e) => {
       let primaryKey = e.target.id;
 
       const deletingItem = await fetch(
-        `https://salty-mountain-91433.herokuapp.com/instructor/remove-lesson/${primaryKey}`,
+        `https://musicly-scheduler.herokuapp.com/instructor/remove-lesson/${primaryKey}`,
         {
           method: "DELETE",
           headers: {
@@ -60,7 +60,7 @@ something.addEventListener("click", async (e) => {
       let primaryKey = e.target.id;
 
       const deletingItem = await fetch(
-        `https://salty-mountain-91433.herokuapp.com/instructor/remove-lesson/${primaryKey}`,
+        `https://musicly-scheduler.herokuapp.com/instructor/remove-lesson/${primaryKey}`,
         {
           method: "DELETE",
           headers: {
@@ -74,7 +74,7 @@ something.addEventListener("click", async (e) => {
       let primaryKey = e.target.id;
 
       const deletingItem = await fetch(
-        `https://salty-mountain-91433.herokuapp.com/instructor/remove-student/${primaryKey}`,
+        `https://musicly-scheduler.herokuapp.com/instructor/remove-student/${primaryKey}`,
         {
           method: "PUT",
           headers: {
@@ -112,7 +112,7 @@ const getFormattedTime = (time) => {
 
 const getAvailableLessons = async () => {
   const dataWeAreSending = await fetch(
-    "https://salty-mountain-91433.herokuapp.com/instructor/populate-lessons",
+    "https://musicly-scheduler.herokuapp.com/instructor/populate-lessons",
     {
       method: "POST",
       headers: {
@@ -158,7 +158,7 @@ const claimedLessonButton = document.getElementById("view-taken");
 
 const getClaimedLessons = async () => {
   const dataWeAreSending = await fetch(
-    "https://salty-mountain-91433.herokuapp.com/instructor/claimed-lessons",
+    "https://musicly-scheduler.herokuapp.com/instructor/claimed-lessons",
     {
       method: "POST",
       headers: {
@@ -223,7 +223,7 @@ const createNewLesson = async () => {
   };
 
   const dataWeAreSending = await fetch(
-    "https://salty-mountain-91433.herokuapp.com/instructor/create-lesson",
+    "https://musicly-scheduler.herokuapp.com/instructor/create-lesson",
     {
       method: "POST",
       headers: {
@@ -247,7 +247,7 @@ const signOutButton = document.getElementById("sign-out-btn");
 
 const logOut = async () => {
   const fetchLogOut = await fetch(
-    "https://salty-mountain-91433.herokuapp.com/signin/logout",
+    "https://musicly-scheduler.herokuapp.com/signin/logout",
     {
       method: "POST",
       headers: {
@@ -258,7 +258,7 @@ const logOut = async () => {
   const json = await fetchLogOut.json();
   if (json.message == "Logout Success") {
     alert("Successfully Logged Out");
-    window.location.href = "https://salty-mountain-91433.herokuapp.com/home";
+    window.location.href = "https://musicly-scheduler.herokuapp.com/home";
   }
 };
 

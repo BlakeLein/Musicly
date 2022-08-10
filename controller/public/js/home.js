@@ -3,7 +3,7 @@
 const signInButton = document.getElementById("signInButton");
 
 signInButton.addEventListener("click", () => {
-  window.location.href = "https://salty-mountain-91433.herokuapp.com/signin";
+  window.location.href = "https://musicly-scheduler.herokuapp.com/signin";
 });
 
 // function myFunction() {
