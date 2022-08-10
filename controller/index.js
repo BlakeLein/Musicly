@@ -53,6 +53,9 @@ app.set("view engine", "html");
 app.get("/home", (req, res) => {
   res.render("home");
 });
+app.get("/", (req, res) => {
+  res.render("home");
+});
 
 app.use("/signup", signUpRoutes);
 app.use("/signin", signInRoutes);
