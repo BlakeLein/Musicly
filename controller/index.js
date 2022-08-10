@@ -45,18 +45,22 @@ store.sync();
 // Template Engine
 app.use(express.static("public"));
 app.engine("html", es6Renderer);
-app.set("views", "./public/views");
+app.set("views", "public/views");
 app.set("view engine", "html");
+
+// Routes
+// Check login and redirect to student or teacher home page
+// app.get("/home", (req, res) => {
+//   res.render("home");
+// });
+app.get("/", (req, res) => {
+  res.render("home");
+});
 
 app.use("/signup", signUpRoutes);
 app.use("/signin", signInRoutes);
 app.use("/student", studentRoutes);
 app.use("/instructor", instructorRoutes);
 app.use("/settings", settingsRoutes);
-
-// Routes
-app.get("/", (req, res) => {
-  res.render("home.html");
-});
 
 app.listen(PORT, console.log(`Listening on Port ${PORT}`));
