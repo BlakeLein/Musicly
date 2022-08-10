@@ -5,7 +5,7 @@ const cors = require("cors");
 const es6Renderer = require("express-es6-template-engine");
 const router = express.Router();
 const PORT = process.env.PORT || 3000;
-const models = require("../sequelize/models");
+const models = require("./sequelize/models");
 
 //cookie/session stuff -need double check download packages!
 const session = require("express-session");
@@ -53,7 +53,7 @@ app.set("view engine", "html");
 // app.get("/home", (req, res) => {
 //   res.render("home");
 // });
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
   res.render("home");
 });
 
@@ -63,4 +63,4 @@ app.use("/student", studentRoutes);
 app.use("/instructor", instructorRoutes);
 app.use("/settings", settingsRoutes);
 
-app.listen(PORT, console.log(`Listening on Port ${PORT}`));
+app.listen(3000, console.log(`Listening on Port ${PORT}`));

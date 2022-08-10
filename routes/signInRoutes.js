@@ -5,7 +5,7 @@ const router = express.Router();
 const cors = require("cors");
 const es6Renderer = require("express-es6-template-engine");
 const bcrypt = require("bcrypt");
-const models = require("../../sequelize/models");
+const models = require("../sequelize/models");
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const store = new SequelizeStore({
@@ -13,9 +13,9 @@ const store = new SequelizeStore({
 });
 
 // Import Modals
-const { Students } = require("../../sequelize/models");
-const { Instructors } = require("../../sequelize/models");
-const { Lessons } = require("../../sequelize/models");
+const { Students } = require("../sequelize/models");
+const { Instructors } = require("../sequelize/models");
+const { Lessons } = require("../sequelize/models");
 const { response } = require("express");
 
 // Middle Ware

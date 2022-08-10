@@ -1,5 +1,3 @@
-// https://salty-mountain-91433.herokuapp.com/
-
 const signInButton = document.getElementById("signInButton");
 
 signInButton.addEventListener("click", () => {

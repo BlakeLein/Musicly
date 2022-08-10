@@ -5,8 +5,8 @@ const cors = require("cors");
 const es6Renderer = require("express-es6-template-engine");
 
 // Import Models
-const { Lessons } = require("../../sequelize/models");
-const { Instructors } = require("../../sequelize/models");
+const { Lessons } = require("../sequelize/models");
+const { Instructors } = require("../sequelize/models");
 
 // Middle Ware
 app.use(express.json());
