@@ -69,7 +69,7 @@ router.put("/change-username", checkUser, async (req, res) => {
         email: newUsername,
       });
       res.json("changed student email");
-    } else if (req.session.user) {
+    } else {
       const findInstructor = await Instructors.findOne({
         where: {
           id: req.session.user.id,

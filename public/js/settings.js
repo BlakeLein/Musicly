@@ -55,10 +55,10 @@ const changeUsername = async () => {
     }
   );
   const json = await sendNewUsername.json();
-  if (json === "changed student email") {
+  if (json == "changed student email") {
     alert("Successfully changed Email. You will now be logged out.");
     logOut();
-  } else if (json === "changed instructor email") {
+  } else if (json == "changed instructor email") {
     alert("Successfully changed instructor email. You will now be logged out.");
     logOut();
   }
