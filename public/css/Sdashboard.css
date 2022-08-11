@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap%27");
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 * {
   margin: 0;
   padding: 0;
@@ -12,18 +12,18 @@
 body {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(#840032, #e5dada);
+  background: linear-gradient(#002642, #e5dada);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: scroll;
 }
+.dash-container {
+  display: flex;
+}
 h2 {
   text-align: center;
   margin: 20px;
-  color: #840032;
-}
-.dash-container {
-  display: flex;
+  color: #002642;
 }
 nav {
   position: relative;
@@ -50,7 +50,7 @@ nav .material-symbols-outlined {
   width: 70px;
   height: 40px;
   top: 14px;
-  font-size: 20px;
+  font-size: 19px;
   text-align: center;
 }
 .nav-item {
@@ -60,10 +60,10 @@ nav .material-symbols-outlined {
   color: #02040f;
 }
 .nav-item:hover {
-  color: #002642;
+  color: #840032;
 }
 a:hover {
-  color: #002642;
+  color: #840032;
 }
 
 /* DISPLAY AREA */
@@ -84,6 +84,12 @@ a:hover {
   padding: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
+
+#card-title {
+  text-align: center;
+  border-bottom: solid 1px #02040f;
+}
+
 #card-title {
   text-align: center;
   border-bottom: solid 1px #02040f;
@@ -103,6 +109,31 @@ a:hover {
   padding: 3px;
   flex-direction: column;
 }
+.claim {
+  background: #840032;
+  color: whitesmoke;
+  padding: 7px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.claim:hover {
+  background: #002642;
+}
+.cancel {
+  background: #840032;
+  color: whitesmoke;
+  padding: 7px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.cancel:hover {
+  background: #002642;
+}
+
 .deleteAvailable {
   background: #840032;
   color: whitesmoke;
@@ -113,31 +144,7 @@ a:hover {
   transition: 0.5s;
 }
 .deleteAvailable:hover {
-  background: #e59500;
-}
-.deleteClaimed {
-  background: #840032;
-  color: whitesmoke;
-  padding: 7px 15px;
-  border-radius: 10px;
-  margin-top: 15px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.deleteClaimed:hover {
-  background: #e59500;
-}
-.removeStudent {
   background: #002642;
-  color: whitesmoke;
-  padding: 7px 15px;
-  border-radius: 10px;
-  margin-top: 15px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.removeStudent:hover {
-  background: #e59500;
 }
 
 li {
@@ -152,7 +159,7 @@ li button {
 }
 
 li button:hover {
-  color: #002642;
+  color: #840032;
   cursor: pointer;
 }
 #sign-out-btn:hover {
@@ -165,182 +172,10 @@ li button:hover {
   grid-gap: 20px;
   padding: 20px;
 }
-.main-container h1 {
-  color: #e5dada;
-}
-
-/* Modal Styles for Create a Lesson Feature*/
-.modal {
-  position: fixed;
-  left: 15%;
-  right: 15%;
-  bottom: 15%;
-  top: 15%;
-  border: solid 1px #02040f;
-  border-radius: 20px;
-  transform: scale(0);
-  z-index: 10;
-  background-color: #002642;
-}
-
-#modal-body {
-  height: 90%;
-}
-.active {
-  transform: scale(1);
-}
-
-#modal-header {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-}
-
-#modal-title {
-  width: 100%;
-  font-size: 30px;
-  color: #e5dada;
-  margin: 20px;
-}
-
-#modal-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #e5dada;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 2.5rem;
-  align-self: center;
-  margin-right: 20px;
-}
-.modal-body {
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-item {
-  color: 707070;
-  width: 80%;
-  height: 90px;
-  margin: 10px;
-  font-size: 20px;
-  font-weight: 700;
-  padding: 10px;
-}
-#start-time {
-  margin-top: 5px;
-  background: #e5dada;
-  font-size: 15px;
-}
-#stop-time {
-  margin-top: 5px;
-  background: #e5dada;
-  font-size: 15px;
-}
-#date {
-  margin-top: 8px;
-  background: #e5dada;
-  font-size: 15px;
-}
-#cost {
-  margin-top: 8px;
-  background: #e5dada;
-  font-size: 15px;
-}
-
-.form-submit-button {
-  margin-top: 10px;
-  width: 200px;
-  border: none;
-  height: 50px;
-  border-radius: 25px;
-  transition: 0.5s;
-  background: #e5dada;
-}
-
-.form-submit-button:hover {
-  color: #e5dada;
-  box-shadow: inset 250px 0 0 0 #840032;
-}
-
-#overlay {
-  position: fixed;
-  opacity: 0;
-  transition: 200ms ease-in-out;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  pointer-events: none;
-}
-
-#overlay.active {
-  pointer-events: all;
-  opacity: 1;
-}
-
-.active {
-  transform: scale(1);
-}
-
-.modal-form {
-  width: 100%;
-  border: solid 1px #02040f;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-label {
-  background: #e5dada;
-  /* border: solid 1px #02040f; */
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  /* flex-grow: 1; */
-}
-
-.login-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
 button {
   padding: 5px;
   margin: 5px;
-}
-
-.info-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.active {
-  transform: scale(1);
-}
-#overlay {
-  position: fixed;
-  opacity: 0;
-  transition: 200ms ease-in-out;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  pointer-events: none;
-}
-
-#overlay.active {
-  pointer-events: all;
-  opacity: 1;
 }
 
 /* SETTINGS STUFF */
@@ -360,6 +195,7 @@ button {
   margin: 15px;
   color: #e5dada;
 }
+
 .login-container label {
   border: none;
 }
@@ -378,19 +214,28 @@ button {
   border-radius: 15px;
   transition: 0.5s;
 }
-#change-email:hover {
+#change-instructor {
+  width: 50%;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+#change-instructor:hover {
+  background: #840032;
   color: #e5dada;
-  background: #002642;
+}
+#change-email:hover {
+  background: #840032;
+  color: #e5dada;
 }
 #change-password:hover {
+  background: #840032;
   color: #e5dada;
-  background: #002642;
 }
 #change-instrument:hover {
+  background: #840032;
   color: #e5dada;
-  background: #002642;
 }
-.InstructorSettings-container {
+.studentSettings-container {
   background-size: cover;
   margin: 0 auto;
   padding: 10px;
@@ -413,7 +258,7 @@ button {
 .signIn-col-left {
   width: 60%;
   clip-path: polygon(0 0, 0% 200%, 100% 0);
-  background: linear-gradient(#002642, #e5dada);
+  background: linear-gradient(#840032, #e5dada);
   border-radius: 20px 20px 0px 0px;
 }
 .signIn-col-right {
@@ -466,7 +311,6 @@ h5 {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  text-align: center;
   color: #666666;
   font-size: 18px;
 }
@@ -494,10 +338,10 @@ h5 {
 }
 
 .login-form input:focus {
-  border-color: #840032;
+  border-color: #002642;
 }
 #delete-account {
-  width: 60%;
+  width: 50%;
   margin-top: 10px;
   font-size: 16px;
   font-weight: 700;
@@ -514,36 +358,20 @@ h5 {
 
 #delete-account:hover {
   color: whitesmoke;
-  box-shadow: inset 250px 0 0 0 #840032;
+  box-shadow: inset 250px 0 0 0 #002642;
 }
-
+.main-container h1 {
+  color: #e5dada;
+}
 @media (max-height: 1160px) {
-  a {
-    position: relative;
-    color: rgb(85, 83, 83);
-    font-size: 17px;
-    display: table;
-    width: 280px;
-    padding: 10px;
-  }
-  li button {
-    position: relative;
-    color: rgb(85, 83, 83);
-    font-size: 17px;
-    display: table;
-    background: #e5dada;
-  }
   .userTitle {
     font-size: 30px;
     margin: 20px;
   }
-  .studentSettings-container {
-    justify-content: initial;
-  }
+
   .login-container {
     flex-direction: column;
     box-shadow: none;
-    border-radius: 20px;
   }
 
   .signIn-col-left,
@@ -554,7 +382,7 @@ h5 {
     padding: 10px;
   }
   .signIn-col-left {
-    background: #002642;
+    background: #840032;
   }
   .signIn-col-right h2 {
     display: none;
@@ -564,12 +392,11 @@ h5 {
     height: 25px;
   }
 }
-
-@media (max-width: 890px) {
+@media (max-width: 902px) {
   a {
     position: relative;
     color: rgb(85, 83, 83);
-    font-size: 14px;
+    font-size: 15px;
     display: table;
     width: 280px;
     padding: 10px;
@@ -577,9 +404,13 @@ h5 {
   li button {
     position: relative;
     color: rgb(85, 83, 83);
-    font-size: 13px;
+    font-size: 15px;
     display: table;
     background: #e5dada;
+  }
+  .studentSettings-container {
+    justify-content: initial;
+    border-radius: 20px;
   }
   .login-container {
     flex-direction: column;
@@ -598,7 +429,29 @@ h5 {
     border-radius: 0px 0px 20px 20px;
   }
 }
-@media (max-width: 770px) {
+
+@media (max-width: 782px) {
+  a {
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 12px;
+    display: table;
+    width: 280px;
+    padding: 10px;
+  }
+  li button {
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 12px;
+    display: table;
+    background: #e5dada;
+  }
+  .signIn-col-right {
+    padding: 30px;
+    padding-bottom: 10px;
+    background: #e5dada;
+    border-radius: 0px 0px 20px 20px;
+  }
   h2 {
     display: none;
   }
