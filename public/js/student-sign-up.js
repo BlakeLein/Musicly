@@ -87,3 +87,13 @@ form.addEventListener("submit", (e) => {
     alert("Your passwords do not match. Please try again.");
   }
 });
+
+// Collapsable NavBar Fucntions
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("menu-button").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("menu-button").style.marginLeft = "0";
+}
