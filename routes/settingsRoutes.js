@@ -158,9 +158,7 @@ router.put("/change-instructor", checkUser, async (req, res) => {
       },
     });
     await findStudent.update({
-      where: {
-        instructor: newInstructor,
-      },
+      instructor: newInstructor,
     });
     res.json("changed student instructor");
   } catch (error) {

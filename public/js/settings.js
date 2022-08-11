@@ -233,10 +233,11 @@ const changeInstructor = async () => {
   );
   const json = await sendNewInstructor.json();
   if (json === "changed student instructor") {
-    alert(
-      "Successfully changed student instructor. You will now be logged out."
-    );
-    logOut();
+    // alert(
+    //   "Successfully changed student instructor. You will now be logged out."
+    // );
+    console.log("Here");
+    // logOut();
   }
 };
 
