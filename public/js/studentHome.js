@@ -1,5 +1,4 @@
 const something = document.querySelector("#something");
-const hi = "blake";
 
 something.addEventListener("click", async (e) => {
   try {
@@ -23,7 +22,7 @@ something.addEventListener("click", async (e) => {
       let primaryKey = e.target.id;
 
       const claimingItem = await fetch(
-        `https://musicly-scheduler.herokuapp.com/cancel-lesson/${primaryKey}`,
+        `https://musicly-scheduler.herokuapp.com/student/cancel-lesson/${primaryKey}`,
         {
           method: "PUT",
           headers: {
