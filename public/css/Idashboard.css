@@ -89,7 +89,7 @@ a:hover {
   border-bottom: solid 1px #02040f;
 }
 #card-date {
-  font-weight: 800;
+  font-weight: 300;
   color: #840032;
 }
 
@@ -167,6 +167,8 @@ li button:hover {
 }
 .main-container h1 {
   color: #e5dada;
+  font-weight: 300;
+  text-align: center;
 }
 
 /* Modal Styles for Create a Lesson Feature*/
@@ -229,7 +231,7 @@ li button:hover {
   height: 90px;
   margin: 10px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 300;
   padding: 10px;
 }
 #start-time {
@@ -357,6 +359,7 @@ button {
 }
 .userTitle {
   font-size: 50px;
+  font-weight: 300;
   margin: 15px;
   color: #e5dada;
 }
@@ -426,6 +429,7 @@ button {
   margin-left: -10px;
 }
 h5 {
+  font-weight: 300;
   margin: 10px;
 }
 
@@ -442,7 +446,7 @@ h5 {
 .login-text h2 {
   margin: 0 0 15px 0;
   font-size: 33px;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .login-form {
@@ -455,7 +459,7 @@ h5 {
 .login-form h2 {
   margin: 0 0 15px 0;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 300;
   color: #02040f;
 }
 .login-form label {
@@ -500,7 +504,7 @@ h5 {
   width: 60%;
   margin-top: 10px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 300;
   text-align: center;
   color: #002642;
   background: transparent;

@@ -40,7 +40,7 @@ body {
 }
 .navbar a {
   font-size: large;
-  font-weight: 600;
+  font-weight: 300;
   color: #002642;
 }
 
@@ -124,18 +124,18 @@ nav ul li a:hover {
 .login-text h2 {
   margin: 0 0 15px 0;
   font-size: 33px;
-  font-weight: 700;
+  font-weight: 300;
 }
 .login-text h5 {
   margin: 0 15px 15px 0;
   padding: 0 10px 0 0;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 300;
 }
 .login-text p {
   margin: 50px 0 20px 0;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 22px;
 }
 .login-text .loginLink:hover {
@@ -151,7 +151,7 @@ nav ul li a:hover {
   color: #002642;
   margin: 0 0 15px 0;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 300;
 }
 .login-form label {
   margin: 10px 10px 10px 0;
