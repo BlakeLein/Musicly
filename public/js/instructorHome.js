@@ -258,7 +258,7 @@ const logOut = async () => {
   const json = await fetchLogOut.json();
   if (json.message == "Logout Success") {
     alert("Successfully Logged Out");
-    window.location.href = "https://musicly-scheduler.herokuapp.com/home";
+    window.location.href = "https://musicly-scheduler.herokuapp.com";
   }
 };
 

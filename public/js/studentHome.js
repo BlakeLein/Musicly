@@ -164,7 +164,7 @@ const logOut = async () => {
     }
   );
   alert("Successfully Logged Out");
-  window.location.href = "https://musicly-scheduler.herokuapp.com/home";
+  window.location.href = "https://musicly-scheduler.herokuapp.com";
 };
 
 signOutButton.addEventListener("click", async () => {
