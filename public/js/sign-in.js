@@ -60,6 +60,7 @@ const sendInstructorData = async () => {
 };
 
 form.addEventListener("submit", (e) => {
+  console.log("click");
   if (accountType.value == "Student") {
     e.preventDefault();
     sendStudentData();
