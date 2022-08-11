@@ -59,8 +59,11 @@ const changeUsername = async () => {
     alert("Successfully changed Email. You will now be logged out.");
     logOut();
   } else if (json == "changed instructor email") {
-    alert("Successfully changed instructor email. You will now be logged out.");
-    logOut();
+    try{
+      alert("Successfully changed instructor email. You will now be logged out.");
+      logOut()
+  } catch(error){
+    console.log("Hit this error")
   }
 };
 
