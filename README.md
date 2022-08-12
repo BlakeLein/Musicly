@@ -61,26 +61,26 @@ As our projects have gotten bigger, so also has the potential for each project. 
 
 ## Photos of Musicly
 
-<img src="controller/public/images/home.png" 
+<img src="public/images/home.png" 
 alt="Home Page"
 width="900" height="400">
 
-<img src="controller/public/images/signin.png" 
+<img src="public/images/signin.png" 
 alt="Sign In Page"
 width="900" height="400">
 
-<img src="controller/public/images/instructorDash.png" 
+<img src="public/images/instructorDash.png" 
 alt="Student Dash"
 width="900" height="400">
 
-<img src="controller/public/images/studentDash.png" 
+<img src="public/images/studentDash.png" 
 alt="Mobile Dash"
-width="200" height="400">
+width="900" height="400">
 
-<img src="controller/public/images/newLesson.png" 
+<img src="public/images/newLesson.png" 
 alt="Create Lesson Page"
 width="900" height="400">
 
-<img src="controller/public/images/settings.png" 
+<img src="public/images/settings.png" 
 alt="Settings Page"
 width="900" height="400">
