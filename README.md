@@ -22,7 +22,7 @@ Published August 2022
 
 ## **Requirements**
 
-Musicly is deployed online, so all you need to get started is this link: ("""")
+Musicly is deployed online, so all you need to get started is this [link](https://musicly-scheduler.herokuapp.com/)
 
 ## How Musicly Works
 
@@ -47,7 +47,25 @@ Here are some of the website's features in greater detail:
 
 ---
 
-## "Discover America" In Development
+## Color Palette
+
+Claret - #840032
+
+Prussian Blue - #002642
+
+Gamboge - E59500
+
+Timberwolf - E5DADA
+
+Rich Black FOGRA 29 - 02040F
+
+<img src="public/images/palette.png" 
+alt="Color Palette"
+width="900" height="400">
+
+---
+
+## Musicly In Development
 
 This website represents the third major project in our Digital Crafts coursework and demonstrates our first full-stack project. Musicly utilizes HTML, CSS, JavaScript, Node.js, Express.js, PostgreSQL, and Sequelize.
 
