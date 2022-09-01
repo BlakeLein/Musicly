@@ -53,11 +53,11 @@ Claret - #840032
 
 Prussian Blue - #002642
 
-Gamboge - E59500
+Gamboge - #E59500
 
-Timberwolf - E5DADA
+Timberwolf - #E5DADA
 
-Rich Black FOGRA 29 - 02040F
+Rich Black FOGRA 29 - #02040F
 
 <img src="public/images/palette.png" 
 alt="Color Palette"
